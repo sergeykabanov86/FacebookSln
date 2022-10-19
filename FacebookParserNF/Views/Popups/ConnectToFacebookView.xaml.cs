@@ -15,7 +15,7 @@ namespace FacebookParserNF.Views.Popups
     public partial class ConnectToFacebookView : Window
     {
         private const string _url = "https://www.facebook.com/";
-
+        private const string domain = ".facebook.com";
         System.Windows.Threading.DispatcherTimer _timer = new System.Windows.Threading.DispatcherTimer();
 
         public List<CefSharp.Cookie> CookiesList { get; set; }
@@ -41,8 +41,8 @@ namespace FacebookParserNF.Views.Popups
         private void _timer_Tick(object sender, EventArgs e)
         {
 
-            Debug.WriteLine("\n\ntimer_Tick click\n\n");
-            var domain = ".facebook.com";
+            //Debug.WriteLine("\n\ntimer_Tick click\n\n");
+            
 
             var visitor = new CookieCollector();
             CefSharp.Cef.GetGlobalCookieManager().VisitUrlCookies(_url, true, visitor);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -47,6 +48,10 @@ namespace FacebookParserNF.ViewModels
 
                var connectToFacebookView = new FacebookParserNF.Views.Popups.ConnectToFacebookView();
                connectToFacebookView.ShowDialog();
+               var cookiesList = connectToFacebookView.CookiesList;
+               var cookiesString = connectToFacebookView.CookiesString;
+
+               Debug.WriteLine("Main CookiesString: " + cookiesString);
 
            }, () => true));
         }
