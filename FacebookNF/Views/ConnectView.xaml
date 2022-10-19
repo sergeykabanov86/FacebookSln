@@ -1,0 +1,14 @@
+﻿<Window x:Class="FacebookNF.Views.ConnectView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FacebookNF.Views"
+        mc:Ignorable="d"
+        Title="ConnectView" Height="377.484" Width="569.158">
+    <DockPanel>
+        <Button DockPanel.Dock="Top" Content="Connect" Click="Button_Click" HorizontalAlignment="Center" Margin="5"/>
+
+        <WebBrowser x:Name="WebBrowser"  Navigated="WebBrowser_Navigated" Navigating="WebBrowser_Navigating"/>
+    </DockPanel>
+</Window>
